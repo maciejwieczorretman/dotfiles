@@ -1,0 +1,6 @@
+[Unit]
+Description=lei synchronize
+
+[Service]
+Type=oneshot
+ExecStart=lei up --all

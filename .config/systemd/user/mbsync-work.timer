@@ -1,0 +1,10 @@
+[Unit]
+Description=mbsync query timer [work]
+ConditionPathExists=%h/.mbsyncrc
+
+[Timer]
+OnBootSec=1m
+OnUnitInactiveSec=10m
+
+[Install]
+WantedBy=default.target
