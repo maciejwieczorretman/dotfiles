@@ -1,0 +1,21 @@
+IMAPAccount work
+<intel specific stuff>
+
+IMAPStore work-remote
+Account work
+
+MaildirStore work-local
+Path ~/Mail/work/
+Inbox ~/Mail/work/Inbox
+SubFolders Verbatim
+
+Channel work
+Far :work-remote:
+Near :work-local:
+# Include everything. Alternatively you can select the folders you're interested on
+Patterns "INBOX" "*"
+# Automatically create missing mailboxes, both locally and on the server
+Create Both
+Sync All
+# Save the synchronization state files in the relevant directory
+SyncState *

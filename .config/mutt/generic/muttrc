@@ -1,0 +1,9 @@
+source ~/.config/mutt/generic/vim-keys
+source ~/.config/mutt/generic/options
+source ~/.config/mutt/generic/mailboxes
+source ~/.config/mutt/generic/sidebar
+source ~/.config/mutt/generic/tags
+source ~/.config/mutt/generic/theme
+source ~/.config/mutt/intel/account
+
+# vim: syntax=neomuttrc

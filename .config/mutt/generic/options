@@ -1,0 +1,42 @@
+# Index
+set index_format="%4C %Z %{%b %d, %H:%M |} %-15.15L %?M?(#%03M)&(%4l)(%=10g)? %s"
+
+# Where to put the stuff
+set message_cachedir="~/.mutt/cache/bodies"
+set certificate_file="~/.mutt/certificates"
+set header_cache=${HOME}/.mutt_cache
+
+# Sorting and messaging
+set sort=threads
+set sort_browser=date
+set sort_aux=reverse-last-date-received
+set askcc
+set timeout=30
+alternative_order text/plain text/enriched text/html
+
+# Change preferred text editor
+set editor=nvim
+set visual=nvim
+set edit_headers=yes
+set date_format="%F at %T %Z"
+
+# Only show cool header parts
+ignore *
+unignore from date subject to cc
+unignore organization organisation x-mailer: x-newsreader: x-mailing-list:
+unignore posted-to:
+unignore Message-Id
+unignore Content-Type
+
+# Other stuff
+alternative_order text/plain text/enriched text/html
+
+set signature = ~/mutt/sig
+
+folder-hook . "push <collapse-all>\n"
+
+set indent_string = '>'
+
+set pager_index_lines = 10
+
+# vim: syntax=neomuttrc

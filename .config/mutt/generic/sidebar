@@ -1,0 +1,47 @@
+# --------------------------------------------------------------------------
+# VARIABLES – shown with their default values
+# --------------------------------------------------------------------------
+
+set sidebar_visible = yes
+set sidebar_width = 40
+set sidebar_short_path = no
+set sidebar_component_depth = 0
+set sidebar_delim_chars = '/.'
+set sidebar_folder_indent = no
+set sidebar_indent_string = '  '
+set sidebar_new_mail_only = no
+set sidebar_non_empty_mailbox_only = no
+set sidebar_next_new_wrap = no
+set sidebar_on_right = no
+set sidebar_divider_char = '|'
+set mail_check_stats
+set sidebar_format="%D %?S?[%N/%S]?"
+set sidebar_sort_method = 'unsorted'
+
+# --------------------------------------------------------------------------
+# FUNCTIONS – shown with an example mapping
+# --------------------------------------------------------------------------
+
+bind index,pager <Backtab> sidebar-prev
+bind index,pager <tab> sidebar-next
+bind index,pager I sidebar-open
+bind index,pager <F3> sidebar-page-up
+bind index,pager <F4> sidebar-page-down
+bind index,pager <F5> sidebar-prev-new
+bind index,pager <F6> sidebar-next-new
+
+# --------------------------------------------------------------------------
+# COLORS – some unpleasant examples are given
+# --------------------------------------------------------------------------
+
+color indicator red black
+color sidebar_indicator black red
+color sidebar_highlight black blue
+color sidebar_divider white white
+color sidebar_flagged red black
+color sidebar_new green black
+color sidebar_ordinary white default
+color sidebar_spool_file white default
+color sidebar_unread yellow default
+
+# vim: syntax=neomuttrc

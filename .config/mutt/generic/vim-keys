@@ -1,0 +1,59 @@
+# Navigation
+# ----------------------------------------------------
+
+bind generic,pager       g         noop
+bind generic             z         noop
+bind  index,pager        d          noop
+bind  index,pager        D          noop
+bind  index,pager        u          noop
+bind index               c           noop
+
+bind generic             gg        first-entry
+bind generic,index       G         last-entry
+bind pager               gg        top
+bind pager               G         bottom
+bind generic,pager       K         previous-line
+bind generic,index,pager J         next-line
+bind generic             zt        current-top
+bind generic             zz        current-middle
+bind generic             zb        current-bottom
+bind index,pager         zn        next-unread
+bind index               =         collapse-all
+bind index               -         collapse-thread
+bind index,pager         N         search-opposite
+
+
+# Actions
+# ----------------------------------------------------
+
+bind  index,pager        a          group-reply
+macro index,pager        dd         "<delete-message><enter>" "Delete message"
+macro index,pager        da         "<delete-thread><enter>" "Delete message"
+macro index,pager        DD         "<delete-message><sync-mailbox><enter>" "Delete message"
+macro index,pager        DA         "<delete-thread><sync-mailbox><enter>" "Delete message"
+macro index,pager        uu         "<undelete-message><enter>" "Undelete message"
+macro index,pager        ua         "<undelete-thread><enter>" "Undelete message"
+
+macro index cN "<tag-pattern>.<enter><tag-prefix><clear-flag>N<tag-prefix><clear-flag>O<untag-pattern>.<enter>" \
+    "mark all new as read"
+
+# Command Line
+# ----------------------------------------------------
+
+bind editor \Cp history-up
+bind editor \Cn history-down
+
+# Macros
+macro index,pager ga "<modify-labels-then-hide>+archive -visible -unread<enter><previous-entry><sync-mailbox>" "Archive message"
+macro index,pager gj "<modify-labels-then-hide>+junk -visible -unread<enter><previous-entry><sync-mailbox>" "Junk message"
+macro index,pager gp "<modify-labels>!pending<enter><previous-entry>" "Pending message"
+macro index,pager gr "<modify-labels>!review<enter><previous-entry>" "Review message"
+macro index,pager gd "<modify-labels>!done<enter><previous-entry>" "Done message"
+macro index,pager gi "<modify-labels>!important<enter><previous-entry>" "Important message"
+
+bind index,pager         <f2>         noop
+bind index               B            noop
+macro index,pager <f2> '<shell-escape>lei up --all; ~/.scripts/notmuch-hook.sh<enter><sync-mailbox>'
+macro index B |'xsel --clipboard'
+
+# vim: syntax=neomuttrc

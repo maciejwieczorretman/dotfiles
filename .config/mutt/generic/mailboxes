@@ -1,0 +1,23 @@
+set virtual_spoolfile=yes
+set nm_default_url = "notmuch://${HOME}/Mail"
+virtual-mailboxes "-------------- MAILBOXES --------------" "notmuch://?query=tag:empty_one"
+virtual-mailboxes "inbox" "notmuch://?query=tag:inbox and tag:visible"
+virtual-mailboxes "sent" "notmuch://?query=tag:sent and tag:visible"
+virtual-mailboxes "linux-drivers-review" "notmuch://?query=tag:linux-driver and tag:visible"
+virtual-mailboxes "intel-linux" "notmuch://?query=tag:intel-linux and tag:visible"
+virtual-mailboxes "kernel-newbies" "notmuch://?query=tag:kernel-newbies and tag:visible"
+virtual-mailboxes "-------------- KERNEL ML --------------" "notmuch://?query=tag:empty_two"
+virtual-mailboxes "mm" "notmuch://?query=thread:"{tag:mm}" and tag:visible"
+virtual-mailboxes "resctrl" "notmuch://?query=thread:"{tag:resctrl}" and tag:visible"
+virtual-mailboxes "kasan" "notmuch://?query=tag:kasan and tag:visible"
+virtual-mailboxes "--------------- FILTERS ---------------" "notmuch://?query=tag:empty_three"
+virtual-mailboxes "pending" "notmuch://?query=thread:"{tag:pending}" and tag:visible"
+virtual-mailboxes "done" "notmuch://?query=thread:"{tag:done}" and tag:visible"
+virtual-mailboxes "review" "notmuch://?query=thread:"{tag:review}" and tag:visible"
+virtual-mailboxes "important" "notmuch://?query=thread:"{tag:important}" and tag:visible"
+virtual-mailboxes "--------------- ARCHIVE ---------------" "notmuch://?query=tag:empty_four"
+virtual-mailboxes "all" "notmuch://?query=thread:"{tag:visible}""
+virtual-mailboxes "archive" "notmuch://?query=tag:archive"
+virtual-mailboxes "junk" "notmuch://?query=tag:junk"
+
+# vim: syntax=neomuttrc

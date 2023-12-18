@@ -1,0 +1,17 @@
+set hidden_tags = "inbox,archive,sent,linux-driver,intel-linux,mm,resctrl,kasan,junk,unread,draft,flagged,passed,replied,attachment,signed,encrypted,todo,new,visible,deleted"
+bind index,pager \` modify-labels
+
+color index		blue default '~Y "important"'
+color index		color1 default '~Y "pending"'
+color index		color10 default '~Y "done"'
+color index		color10 default '~(~Y "done")'
+color index		color16 default '~(~Y "review")'
+color index		color1 default '~(~Y "pending")'
+color index		blue default '~(~Y "important")'
+
+color index_tags	color1 default '~Y "pending"'
+color index_tags	color10 default '~Y "done"'
+color index_tags	color16 default '~Y "review"'
+color index_tags	blue default '~Y "important"'
+
+# vim: syntax=neomuttrc

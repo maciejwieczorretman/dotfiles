@@ -1,0 +1,13 @@
+[database]
+path=/home/maciej/Mail
+
+[user]
+name=Maciej Wieczór-Retman
+primary_email=maciej.wieczor-retman@intel.com
+
+[new]
+tags=new
+
+[search]
+
+[maildir]
