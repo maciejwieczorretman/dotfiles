@@ -17,5 +17,5 @@ Otherwise just open a new terminal.
 ### Run tpm inside a tmux session
 - Use this key combination to install the plugins into ~/.tmux/plugins/tpm
  
-Ctrl s + I 
-or <tmux prefix> + I if you changed the prefix setting.
+Ctrl s + i 
+or <tmux prefix> + i if you changed the prefix setting.
