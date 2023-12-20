@@ -18,4 +18,9 @@ Otherwise just open a new terminal.
 - Use this key combination to install the plugins into ~/.tmux/plugins/tpm
  
 Ctrl s + i 
-or <tmux prefix> + i if you changed the prefix setting.
+
+or 
+
+\<tmux prefix\> + i 
+
+if you changed the prefix setting.
